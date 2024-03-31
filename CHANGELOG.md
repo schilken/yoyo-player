@@ -1,46 +1,51 @@
-## [0.0.1] - 2020-07-30
+## 0.0.1
 
-* M3U8 can be turned on by selecting the quality
+* Initial release.
 
-## [0.0.2] - 2020-08-04
+## 0.0.2
 
-* Bug Fix
-* FullScreen Add
+* Update cache file location on iOS.
 
-## [0.0.3] - 2020-08-04
+## 0.0.3
 
-* Bug Fix
+* Update Flutter version
+* Fix pub error
 
-## [0.0.4] - 2020-08-05
+## 0.0.3+1
 
-* Bug Fix
+* Fix pub error
 
-## [0.0.5] - 2020-08-06
+## 0.0.4
 
-* Bug Fix
-* (.srt) Video Subtitle Support
+* Add missed properties and method call
+* Update some methods logic
+* Update document for permission request
 
-## [0.0.6] - 2020-08-07
+## 0.0.4+1
 
-* Bug Fix
-* Custom Vieo Play Widget Support
+* Update document
+* Remove redundant code
 
-## [0.0.7] - 2020-08-07
+## 0.0.5
 
-* analysis fix
+* Add live direct button for live video feature
+* Update document
 
-## [0.0.8] - 2020-08-12
+## 0.0.5+1
 
-* FullScreen Support
-* Fix quality issues
+* Add enable and disable system's orientation override feature
+* Update document
 
-## [0.0.9] - 2020-09-17
+## 0.0.5+2
 
-* change ui
-* fix audio streaming
-* remove sub support
-* Bug fix
+* Fix video player show loading after change m3u8 video quality issue
 
-## [0.1.0] - 2020-10-19
+## 0.0.6
 
-* dependencies update
+* Updates minimum Flutter version to 3.10
+
+## 0.0.7
+* Upgrade all package to newest version
+
+## 0.0.8
+* Update old package to new version

@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
+export 'package:yoyo_player/src/utils/extensions/duration_extensions.dart';
+export 'package:yoyo_player/src/utils/extensions/screen_size_extensions.dart';
+export 'package:yoyo_player/src/utils/extensions/video_controller_extensions.dart';
 
-double calculateAspectRatio(BuildContext context, Size screenSize) {
-  final width = screenSize.width;
-  final height = screenSize.height;
-  // return widget.playOptions.aspectRatio ?? controller.value.aspectRatio;
-  return width > height ? width / height : height / width;
-}
+export 'package_utils/file_utils.dart';
+export 'package_utils/screen_utils.dart';

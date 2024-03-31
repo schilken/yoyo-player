@@ -1,5 +1,11 @@
-class M3U8pass {
+/// The data of the m3u8 file
+class M3U8Data {
+  /// The quality of the video
   final String? dataQuality;
+
+  /// The video's url
   final String? dataURL;
-  M3U8pass({this.dataURL, this.dataQuality});
+
+  /// Constructor
+  M3U8Data({this.dataURL, this.dataQuality});
 }

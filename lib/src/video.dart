@@ -278,7 +278,6 @@ class _YoYoPlayerState extends State<YoYoPlayer>
             SystemUiMode.manual,
             overlays: [SystemUiOverlay.bottom],
           );
-        
         } else if (orientation == Orientation.portrait) {
           // Portrait screen
           fullScr = false;
@@ -330,10 +329,11 @@ class _YoYoPlayerState extends State<YoYoPlayer>
 
   @override
   Widget build(BuildContext context) {
+    final aspectRatio = fullScreen
+        ? MediaQuery.of(context).size.calculateAspectRatio()
+        : widget.aspectRatio;
     return AspectRatio(
-      aspectRatio: fullScreen
-          ? MediaQuery.of(context).size.calculateAspectRatio()
-          : widget.aspectRatio,
+      aspectRatio: aspectRatio,
       child: controller.value.isInitialized
           ? Stack(
               children: <Widget>[
@@ -348,7 +348,7 @@ class _YoYoPlayerState extends State<YoYoPlayer>
                   },
                   child: Center(
                     child: AspectRatio(
-                      aspectRatio: controller.value.aspectRatio,
+                      aspectRatio: aspectRatio,
                       child: VideoPlayer(controller),
                     ),
                   ),

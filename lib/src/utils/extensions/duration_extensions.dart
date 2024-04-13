@@ -12,7 +12,7 @@ extension DurationExtensions on Duration {
       }
     }
 
-    var minutes = inMinutes.toString();
+    var minutes = (inMinutes % 60).toString();
     if (minutes.length == 1) {
       minutes = '0$minutes';
     }

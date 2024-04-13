@@ -87,6 +87,19 @@ class PlayerBottomBar extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: () {
+                            controller.fastRewind().then((value) {
+                              onRewind?.call(controller.value);
+                            });
+                          },
+                          child: videoStyle.backwardIcon ??
+                              Icon(
+                                Icons.fast_rewind_outlined,
+                                color: videoStyle.forwardIconColor,
+                                size: videoStyle.forwardAndBackwardBtSize,
+                              ),
+                        ),
+                        InkWell(
+                          onTap: () {
                             controller.rewind().then((value) {
                               onRewind?.call(controller.value);
                             });
@@ -137,13 +150,26 @@ class PlayerBottomBar extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            controller.fastForward().then((value) {
+                            controller.forward().then((value) {
                               onFastForward?.call(controller.value);
                             });
                           },
                           child: videoStyle.forwardIcon ??
                               Icon(
                                 Icons.fast_forward_rounded,
+                                color: videoStyle.forwardIconColor,
+                                size: videoStyle.forwardAndBackwardBtSize,
+                              ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            controller.fastForward().then((value) {
+                              onFastForward?.call(controller.value);
+                            });
+                          },
+                          child: videoStyle.forwardIcon ??
+                              Icon(
+                                Icons.fast_forward_outlined,
                                 color: videoStyle.forwardIconColor,
                                 size: videoStyle.forwardAndBackwardBtSize,
                               ),
